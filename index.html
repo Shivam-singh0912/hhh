@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GharSetu | A Bridge to Your Real Estate Journey</title>
+    <meta name="description"
+        content="GharSetu connects genuine buyers to premium properties at exclusive insider valuations with trust, value, and seamless execution.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Cinzel:wght@400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/logo-styles.css">
+    <link rel="stylesheet" href="css/fab-styles.css">
+    <style>
+        :root {
+            --font-heading: 'Playfair Display', serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-heading) !important;
+            font-weight: 300 !important;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+        }
+
+        /* Force disable text animations */
+        .hero-content *, .gs-split-char {
+            animation: none !important;
+            transition: none !important;
+            opacity: 1 !important;
+            transform: none !important;
+        }
+    </style>
+</head>
+
+<body class="dark-hero">
+
+
+    <div id="nmb-progress"></div>
+
+    <header id="main-header">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" aria-label="GharSetu Home">
+                    <img src="assets/logo.png" alt="GharSetu" class="logo-img">
+                </a>
+            </div>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link nav-link--active">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="reviews.html" class="nav-link">Reviews</a>
+                <a href="contact.html" class="nav-link nav-link--cta">Contact Us</a>
+                <a href="#" class="btn-consultation" id="consultation-trigger">Free Consultation</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="nav-icon" id="search-trigger" aria-label="Open search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="nav-icon">
+                    <a href="tel:+919198197668" style="color:inherit;" aria-label="Call GharSetu">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                </div>
+                <div class="hamburger-menu" id="menu-trigger" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+
+            <div class="mega-menu" id="mega-menu">
+                <div class="mega-col">
+                    <h4>GharSetu</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="what-we-do.html">What We Provide</a></li>
+                        <li><a href="interior.html">Interior Design</a></li>
+                        <li><a href="reviews.html">Client Reviews</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li style="margin-top: 1.5rem;"><a href="#" class="btn-consultation"
+                                id="mobile-consultation-trigger">Free Consultation</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="modal-overlay" id="appointment-modal">
+        <div class="modal-container">
+            <div class="modal-close" id="modal-close" aria-label="Close appointment modal">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <h2>Book Your Appointment</h2>
+            <form class="appointment-form">
+                <div class="form-field">
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="form-field">
+                    <label>Phone</label>
+                    <input type="tel" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-field">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-field">
+                    <label>Appointment Date</label>
+                    <input type="date" required>
+                </div>
+                <div class="form-field">
+                    <label>Time Slot</label>
+                    <input type="time" required>
+                    <span class="availability-note">Available: 9:00 AM - 7:00 PM (Lunch: 1:30 - 2:30 PM)</span>
+                </div>
+                <button type="submit" class="submit-appointment">
+                    Submit <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-header">
+            <div class="logo" style="font-size: 1.8rem; font-weight: 700; color: #fff;">
+                Ghar<span style="color: var(--accent-color);">Setu</span>
+            </div>
+            <div class="nav-icon" id="search-close" style="font-size: 2rem; color: #fff;" aria-label="Close search">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <div class="search-input-container">
+            <input type="text" placeholder="Search for projects, cities, or localities...">
+        </div>
+    </div>
+
+    <section class="hero" id="hero">
+        <img class="hero-video" src="assets/hero-image.png" alt="Luxury Real Estate" id="hero-video">
+        <div class="hero-video-overlay"></div>
+
+        <div class="hero-content hero-active" style="color: #ffffff;">
+            <h4
+                style="color: #ffffff; opacity: 0.9; letter-spacing: 4px; text-transform: uppercase; font-size: 0.65rem; margin-bottom: 0.8rem;">
+                WELCOME TO GHARSETU</h4>
+            <h1 class="hero-title"
+                style="color: #ffffff; font-size: clamp(1.2rem, 2.5vw, 1.8rem); line-height: 1.3; margin-bottom: 1.5rem;">
+                <span class="title-line">A Bridge to Your</span>
+                <span class="title-line">Real Estate Journey</span>
+            </h1>
+            <p style="color: rgba(255, 255, 255, 0.9); font-size: 0.9rem; font-style: italic; margin-bottom: 1.8rem;">We
+                guarantee services at the most affordable price.</p>
+            <a href="contact.html" class="btn-primary" id="hero-consult-trigger"
+                style="text-transform: uppercase; letter-spacing: 2px; padding: 1rem 2.5rem; font-size: 0.9rem;">GET
+                STARTED</a>
+        </div>
+    </section>
+
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid reveal" data-stagger="90">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="200">0</span><span class="stat-suffix">+</span>
+                    <p class="stat-label">Happy Clients</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="8">0</span><span class="stat-suffix">+</span>
+                    <p class="stat-label">Years of Trust</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+                    <p class="stat-label">Premium Projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light" id="about-home">
+        <div class="container">
+            <div class="about-grid reveal">
+                <div class="about-image-content" data-parallax="0.12"></div>
+                <div class="about-text-content">
+                    <p
+                        style="color: #8a6d3b; text-transform: uppercase; letter-spacing: 4px; font-weight: 500; font-size: 0.85rem; margin-bottom: 1.2rem; opacity: 0.8;">
+                        About GharSetu</p>
+                    <h2
+                        style="font-size: clamp(1.2rem, 2vw, 1.6rem); line-height: 1.4; margin-bottom: 1.5rem; color: var(--primary-color);">
+                        A bridge between the right buyer and the right property.</h2>
+                    <p style="color: #666; font-size: 1.05rem; line-height: 1.85; margin-bottom: 2.8rem;">We simplify
+                        the real estate journey by connecting individuals and investors with curated opportunities. From
+                        discovery and site visits to paperwork and after-sale support, GharSetu keeps the process clear
+                        and reliable.</p>
+                    <a href="about.html" class="btn-ghost"
+                        style="display: inline-block; padding: 1rem 2.8rem; border: 1px solid #d4c5b9; color: #8a6d3b; text-decoration: none; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.85rem; font-weight: 500; transition: 0.3s; background: transparent;">Know
+                        More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-services-premium" id="home-services">
+        <div class="container">
+            <div class="home-services-header reveal" style="text-align: center;">
+                <h4>OUR PROCESS</h4>
+                <h2>Real Estate Guidance, End To End</h2>
+
+            </div>
+
+            <div class="services-grid reveal" data-stagger="120">
+                <div class="service-card">
+                    <span class="home-service-step">01</span>
+                    <i class="fa-solid fa-shield"></i>
+                    <h3>Verified Sourcing</h3>
+                    <p>Shortlisted properties from trusted developers and high-potential localities.</p>
+                </div>
+                <div class="service-card">
+                    <span class="home-service-step">02</span>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Investment Advisory</h3>
+                    <p>ROI focused guidance based on budget, purpose, location, and growth outlook.</p>
+                </div>
+                <div class="service-card">
+                    <span class="home-service-step">03</span>
+                    <i class="fa-solid fa-file-signature"></i>
+                    <h3>Documentation</h3>
+                    <p>Clear support for legal checks, bookings, agreements, and handover paperwork.</p>
+                </div>
+                <div class="service-card">
+                    <span class="home-service-step">04</span>
+                    <i class="fa-solid fa-couch"></i>
+                    <h3>Interior Support</h3>
+                    <p>Premium interior design assistance after purchase for a complete home journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section prop-type-section bg-light" id="property-types">
+        <div class="container">
+            <div class="section-header center reveal">
+                <span class="badge">Explore By Type</span>
+                <h2>Find Your Perfect Space</h2>
+            </div>
+
+            <div class="prop-tabs reveal">
+                <button class="prop-tab active" data-panel="panel-residential">Residential</button>
+                <button class="prop-tab" data-panel="panel-villas">Villas</button>
+                <button class="prop-tab" data-panel="panel-investment">Investment</button>
+            </div>
+
+            <div class="prop-panels">
+                <div class="prop-panel active" id="panel-residential">
+                    <div class="prop-type-scroll-wrapper">
+                        <div class="prop-type-grid reveal" data-stagger="120">
+                            <div class="prop-type-card">
+                                <div class="prop-type-img"
+                                    style="background-image: url('assets/bangalore-luxury-apartment.png');"></div>
+                                <div class="prop-type-overlay">
+                                    <h3>Luxury Apartments</h3>
+                                    <p>Premium high-rise homes in fast-growing Bangalore corridors.</p>
+                                    <a href="contact.html" class="btn-outline">Explore</a>
+                                </div>
+                            </div>
+                            <div class="prop-type-card">
+                                <div class="prop-type-img" style="background-image: url('assets/gated-new.jpg');"></div>
+                                <div class="prop-type-overlay">
+                                    <h3>Gated Communities</h3>
+                                    <p>Secure, amenity-rich living for families and long-term investors.</p>
+                                    <a href="contact.html" class="btn-outline">Explore</a>
+                                </div>
+                            </div>
+                            <div class="prop-type-card">
+                                <div class="prop-type-img"
+                                    style="background-image: url('assets/bangalore-smart-home.png');"></div>
+                                <div class="prop-type-overlay">
+                                    <h3>Smart Homes</h3>
+                                    <p>Modern residences with efficient layouts and strong resale value.</p>
+                                    <a href="contact.html" class="btn-outline">Explore</a>
+                                </div>
+                            </div>
+                            <div class="prop-type-card">
+                                <div class="prop-type-img"
+                                    style="background-image: url('assets/bangalore-penthouse.png');"></div>
+                                <div class="prop-type-overlay">
+                                    <h3>Penthouses</h3>
+                                    <p>Signature homes with elevated views and premium finishes.</p>
+                                    <a href="contact.html" class="btn-outline">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prop-scroll-hint"><span>Scroll to view more</span><i
+                            class="fa-solid fa-chevron-down"></i></div>
+                </div>
+
+                <div class="prop-panel" id="panel-villas">
+                    <div class="prop-type-grid reveal" data-stagger="120">
+                        <div class="prop-type-card">
+                            <div class="prop-type-img" style="background-image: url('assets/premium-villas.png');">
+                            </div>
+                            <div class="prop-type-overlay">
+                                <h3>Premium Villas</h3>
+                                <p>Independent luxury homes with privacy, landscape, and lifestyle value.</p>
+                                <a href="contact.html" class="btn-outline">Explore</a>
+                            </div>
+                        </div>
+                        <div class="prop-type-card">
+                            <div class="prop-type-img" style="background-image: url('assets/property2.png');"></div>
+                            <div class="prop-type-overlay">
+                                <h3>Villa Plots</h3>
+                                <p>Curated plotted developments for custom homes and capital growth.</p>
+                                <a href="contact.html" class="btn-outline">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prop-panel" id="panel-investment">
+                    <div class="prop-type-grid reveal" data-stagger="120">
+                        <div class="prop-type-card">
+                            <div class="prop-type-img"
+                                style="background-image: url('assets/penthouse-collection.png');"></div>
+                            <div class="prop-type-overlay">
+                                <h3>Global Investments</h3>
+                                <p>Remote-friendly property guidance with documentation and post-sale help.</p>
+                                <a href="contact.html" class="btn-outline">Explore</a>
+                            </div>
+                        </div>
+                        <div class="prop-type-card">
+                            <div class="prop-type-img" style="background-image: url('assets/products_bg.png');"></div>
+                            <div class="prop-type-overlay">
+                                <h3>Commercial Picks</h3>
+                                <p>Selected opportunities for income, appreciation, and business use.</p>
+                                <a href="contact.html" class="btn-outline">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="mission" style="background: #ffffff; padding: 120px 0;">
+        <div class="container">
+            <div class="sustainability-content reveal">
+                <div class="sustainability-image"
+                    style="background-image: url('assets/mission-building.png'); background-size: cover; background-position: center; border-radius: 4px;"
+                    data-parallax="0.08"></div>
+                <div class="sustainability-text">
+                    <div class="gs-mission-header"
+                        style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 15px;">
+                        <span class="gs-mission-line"
+                            style="display: inline-block; width: 40px; height: 1px; background: #8a6d3b;"></span>
+                        <span class="gs-mission-badge"
+                            style="color: #8a6d3b; text-transform: uppercase; letter-spacing: 4px; font-weight: 500; font-size: 0.8rem; opacity: 0.9;">OUR
+                            MISSION</span>
+                    </div>
+                    <h2
+                        style="font-size: clamp(1.2rem, 2vw, 1.6rem); line-height: 1.4; margin-bottom: 1.5rem; color: #1a1a1a;">
+                        To simplify the Real Estate journey by connecting individuals with the right opportunities.</h2>
+                    <p class="gs-mission-desc"
+                        style="color: #666; font-size: 1rem; line-height: 1.8; margin-bottom: 2.5rem; font-weight: 300;">
+                        Ensuring fair pricing and managing every step with complete transparency, trust, and care.</p>
+                    <a href="contact.html" class="btn-ghost"
+                        style="padding: 1.1rem 3.2rem; border-color: #d4c5b9; color: #8a6d3b; letter-spacing: 2px;">
+                        CONTACT US <i class="fa-solid fa-arrow-right" style="font-size: 0.75rem; margin-left: 8px;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="gs-brand-ribbon" style="background: #c5a059; color: #0a192f; padding: 15px 0;">
+        <div class="gs-ribbon-track"
+            style="color: #0a192f; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">
+            <span>Premium Properties</span><span class="gs-ribbon-sep">&bull;</span>
+            <span>Verified Guidance</span><span class="gs-ribbon-sep">&bull;</span>
+            <span>Builder Partnerships</span><span class="gs-ribbon-sep">&bull;</span>
+            <span>Global Real Estate Support</span><span class="gs-ribbon-sep">&bull;</span>
+            <span>Premium Properties</span><span class="gs-ribbon-sep">&bull;</span>
+            <span>Verified Guidance</span><span class="gs-ribbon-sep">&bull;</span>
+            <span>Builder Partnerships</span><span class="gs-ribbon-sep">&bull;</span>
+            <span>Global Real Estate Support</span><span class="gs-ribbon-sep">&bull;</span>
+        </div>
+    </div>
+
+    <section class="partners-showcase">
+        <div class="container">
+            <div class="partners-header reveal">
+                <h5 class="partners-subtitle">Executive Partners</h5>
+                <h2 class="partners-title">Partners Across Premium Real Estate</h2>
+            </div>
+        </div>
+
+        <div class="partners-marquee-container reveal">
+            <div class="partners-marquee row-1">
+                <div class="marquee-track">
+                    <div class="partner-box"><span class="partner-name">Prestige</span></div>
+                    <div class="partner-box"><span class="partner-name">Sobha</span></div>
+                    <div class="partner-box"><span class="partner-name">Godrej</span></div>
+                    <div class="partner-box"><span class="partner-name">Brigade</span></div>
+                    <div class="partner-box"><span class="partner-name">Assetz</span></div>
+                    <div class="partner-box"><span class="partner-name">Puravankara</span></div>
+                    <div class="partner-box"><span class="partner-name">Prestige</span></div>
+                    <div class="partner-box"><span class="partner-name">Sobha</span></div>
+                    <div class="partner-box"><span class="partner-name">Godrej</span></div>
+                    <div class="partner-box"><span class="partner-name">Brigade</span></div>
+                    <div class="partner-box"><span class="partner-name">Assetz</span></div>
+                    <div class="partner-box"><span class="partner-name">Puravankara</span></div>
+                </div>
+            </div>
+            <div class="partners-marquee row-2">
+                <div class="marquee-track">
+                    <div class="partner-box"><span class="partner-name">Total Environment</span></div>
+                    <div class="partner-box"><span class="partner-name">Lodha</span></div>
+                    <div class="partner-box"><span class="partner-name">Embassy</span></div>
+                    <div class="partner-box"><span class="partner-name">Mahindra Lifespaces</span></div>
+                    <div class="partner-box"><span class="partner-name">Century</span></div>
+                    <div class="partner-box"><span class="partner-name">Casagrand</span></div>
+                    <div class="partner-box"><span class="partner-name">Total Environment</span></div>
+                    <div class="partner-box"><span class="partner-name">Lodha</span></div>
+                    <div class="partner-box"><span class="partner-name">Embassy</span></div>
+                    <div class="partner-box"><span class="partner-name">Mahindra Lifespaces</span></div>
+                    <div class="partner-box"><span class="partner-name">Century</span></div>
+                    <div class="partner-box"><span class="partner-name">Casagrand</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="partners-cta-container">
+            <a href="contact.html" class="btn-partner">Partner With GharSetu <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <footer class="premium-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="Ghar Setu" class="footer-logo">
+                    <br>
+                    <div class="brand-badge">Ghar Setu</div>
+                    <p class="brand-desc">To simplify the Real Estate Journey by connecting individuals with the right
+                        opportunities.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-col-title">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="what-we-do.html">What We Provide</a></li>
+                        <li><a href="interior.html">Interior Design</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-col-title">Contact</h4>
+                    <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Bangalore,
+                            India</span></div>
+                    <div class="footer-contact-item"><i
+                            class="fa-solid fa-envelope"></i><span>connectgharsetu@gmail.com</span></div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+919198197668" style="color: inherit; text-decoration: none;">091981 97668</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/919198197668" target="_blank"
+                            style="color: inherit; text-decoration: none;">WhatsApp Us</a>
+                    </div>
+                </div>
+                <div class="footer-subscribe">
+                    <h4 class="footer-col-title">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1FwmXoHGFz/" class="social-btn" target="_blank"
+                            rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://wa.me/919198197668" class="social-btn" target="_blank" rel="noopener"
+                            aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/gharseturealities?igsh=cGU3anBuenBjcmVj" class="social-btn"
+                            target="_blank" rel="noopener" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-new">
+                <p>&copy; 2026 - All Rights Reserved | Ghar Setu</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="social-orb-wrap" id="social-orb-wrap">
+        <div class="orb-backdrop" id="orb-backdrop"></div>
+        <div class="orb-links">
+            <a href="https://wa.me/919198197668" class="orb-link wa" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span class="orb-tooltip">WhatsApp</span>
+            </a>
+            <a href="https://www.instagram.com/gharseturealities?igsh=cGU3anBuenBjcmVj" class="orb-link ig"
+                target="_blank" rel="noopener">
+                <i class="fa-brands fa-instagram"></i>
+                <span class="orb-tooltip">Instagram</span>
+            </a>
+            <a href="https://www.facebook.com/share/1FwmXoHGFz/" class="orb-link fb" target="_blank" rel="noopener">
+                <i class="fa-brands fa-facebook-f"></i>
+                <span class="orb-tooltip">Facebook</span>
+            </a>
+        </div>
+        <div class="social-orb" id="social-orb">
+            <div class="orb-3d-sphere">
+                <div class="orb-core"></div>
+                <div class="orb-tile wa"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="orb-tile ig"><i class="fa-brands fa-instagram"></i></div>
+                <div class="orb-tile fb"><i class="fa-brands fa-facebook-f"></i></div>
+                <div class="orb-tile wa"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="orb-tile ig"><i class="fa-brands fa-instagram"></i></div>
+                <div class="orb-tile fb"><i class="fa-brands fa-facebook-f"></i></div>
+                <div class="orb-tile wa"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="orb-tile ig"><i class="fa-brands fa-instagram"></i></div>
+                <div class="orb-tile fb"><i class="fa-brands fa-facebook-f"></i></div>
+                <div class="orb-tile wa"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="orb-tile ig"><i class="fa-brands fa-instagram"></i></div>
+                <div class="orb-tile fb"><i class="fa-brands fa-facebook-f"></i></div>
+                <div class="orb-tile wa"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="orb-tile ig"><i class="fa-brands fa-instagram"></i></div>
+                <div class="orb-tile fb"><i class="fa-brands fa-facebook-f"></i></div>
+            </div>
+            <i class="fa-solid fa-share-nodes orb-center-icon"></i>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
